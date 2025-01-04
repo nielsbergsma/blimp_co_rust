@@ -1,0 +1,40 @@
+{
+  "service": {
+    "scheduling_api": {
+      "FlightScheduledV1": [
+        "scheduling_queue",
+        "reservation_queue"
+      ],
+      "AirshipAddedToFleetV1": [
+        "scheduling_queue"
+      ],
+      "AirfieldRegisteredV1": [
+        "scheduling_queue",
+        "reservation_queue"
+      ]
+    },
+    "reservation_api": {
+      "JourneyPublishedV1": [
+        "reservation_queue"
+      ],
+      "FlightAvailabilityChangedV1": [
+        "reservation_queue"
+      ],
+      "ReservationConfirmedV1": [
+        "reservation_queue"
+      ],
+      "ReservationCancelledV1": [
+
+      ],
+      "FlightReservationRequestedV1": [
+        "reservation_queue"
+      ],
+      "FlightReservedV1": [
+        "reservation_queue"
+      ],
+      "FlightReservationFailedV1": [
+        "reservation_queue"
+      ]
+    }
+  }
+}

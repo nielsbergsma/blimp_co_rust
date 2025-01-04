@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "miniflare": "^3.20231218.1"
+  },
+  "type": "module",
+  "scripts": {
+    "serve": "node environment.js"
+  },
+  "dependencies": {
+  }
+}

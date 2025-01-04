@@ -1,0 +1,15 @@
+[package]
+name = "scheduling_api"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+worker = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+scheduling = { workspace = true }
+prelude = { workspace = true }
+chrono = { workspace = true }

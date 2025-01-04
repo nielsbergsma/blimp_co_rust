@@ -1,0 +1,10 @@
+target/
+node_modules/
+/deployment/dist
+
+.wrangler/
+.DS_Store
+.idea/
+
+local/build
+package-lock.json

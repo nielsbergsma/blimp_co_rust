@@ -1,0 +1,4 @@
+name = "reservation_api"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-09-23"
+

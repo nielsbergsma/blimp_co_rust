@@ -1,0 +1,17 @@
+[package]
+name = "prelude"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+url = { version = "2.5", default-features=false, features=["serde"] }
+geohash = { version = "0.13", default-features=false }
+chrono = { workspace = true }
+uuid = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+pom = { version = "3", default-features=false, features=["utf8"] }
+async-trait = { version = "0.1", default-features=false }
+rust_decimal = { version = "1.34", default-features=false, features = ["serde", "serde_json"] }
+prelude_macros = { path="../prelude_macros" }

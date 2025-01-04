@@ -1,0 +1,11 @@
+[package]
+name = "reservation"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+prelude = { workspace = true }

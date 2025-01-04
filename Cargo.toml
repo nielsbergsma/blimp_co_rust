@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "domain/scheduling",
+    "domain/reservation",
+    "service/scheduling_api",
+    "service/reservation_api",
+    "prelude",
+    "prelude_macros"
+]
+
+[workspace.dependencies]
+uuid = { version = "1.6", default-features=false, features=["v4", "js"] }
+serde = { version = "1.0", default-features=false, features=["derive"] }
+serde_json = { version = "1.0", default-features=false, features=["alloc", "std"] }
+thiserror = { version = "2.0.9", default-features=false }
+chrono = { version = "0.4", default-features=false, features=["serde", "clock", "wasmbind", "alloc"] }
+worker = { version = "0.5.0", default-features=false, features = ["queue"] }
+prelude = { path="prelude" }
+scheduling = { path="domain/scheduling" }
+reservation = { path="domain/reservation" }

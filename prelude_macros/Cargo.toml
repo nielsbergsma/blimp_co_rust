@@ -1,0 +1,12 @@
+[package]
+name = "prelude_macros"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+quote = { version = "1.0", default-features = false }

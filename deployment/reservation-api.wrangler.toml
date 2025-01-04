@@ -1,0 +1,27 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "reservation-api-rs"
+main = "dist/reservation_api/shim.mjs"
+compatibility_date = "2024-09-25"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = false
+
+[[durable_objects.bindings]]
+name = "reservation_objects"
+class_name = "ReservationRepository"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["ReservationRepository"]
+
+[[queues.producers]]
+binding = "reservation_queue"
+queue = "reservation-rs-queue"
+
+[[queues.consumers]]
+queue = "reservation-rs-queue"
+
+[[r2_buckets]]
+binding = "reservation_rs_bucket"
+bucket_name = "reservation-rs"
