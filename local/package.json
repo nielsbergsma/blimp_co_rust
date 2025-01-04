@@ -4,7 +4,8 @@
   },
   "type": "module",
   "scripts": {
-    "serve": "node environment.js"
+    "serve@backend": "node environment.js",
+    "serve@frontend": "node server.js"
   },
   "dependencies": {
   }

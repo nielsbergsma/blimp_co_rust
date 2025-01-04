@@ -17,10 +17,10 @@ build:
 	ln -s ../../service/reservation_api/build/worker deployment/dist/reservation_api
 
 serve@backend: build
-	cd local && npm run serve
+	cd local && npm run serve@backend
 
 serve@frontend:
-	cd frontend/backoffice && node server.js
+	cd local && npm run serve@frontend
 
 deploy@scheduling-api: build
 	npx --yes wrangler deploy --config deployment/scheduling-api.wrangler.toml

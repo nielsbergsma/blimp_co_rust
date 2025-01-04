@@ -1,7 +1,8 @@
-const http = require("http");
-const fs = require("fs").promises;
+import http from "http"
+import fs from "fs/promises"
 
-const prefix = "/backoffice"
+const assetPath = "../frontend/backoffice";
+const prefix = "/backoffice";
 const host = '127.0.0.1';
 const port = 5001;
 
@@ -40,7 +41,7 @@ async function handler(request, response) {
     }
 
     try {
-        const content = await fs.readFile("." + path);
+        const content = await fs.readFile(assetPath + path);
         response.setHeader("Content-Type", getContentType(path));
         response.end(content);
     } catch (exception) {
