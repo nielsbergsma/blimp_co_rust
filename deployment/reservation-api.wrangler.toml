@@ -21,6 +21,7 @@ queue = "reservation-rs-queue"
 
 [[queues.consumers]]
 queue = "reservation-rs-queue"
+max_concurrency = 1 # single writer
 
 [[r2_buckets]]
 binding = "reservation_rs_bucket"
